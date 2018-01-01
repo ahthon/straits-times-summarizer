@@ -15,24 +15,31 @@ A set of scripts to scrape for news from The Straits Times and summarize the new
 
 ## Features
 
-**st_news.py**
+`st_news.py`
 - Summaries of news articles (TexRank summarization).
 - Article's tags, author, and the date/time it was published.
 - Outputs summaries, original texts, and news headlines as .txt files.
 
-**summarizer.py**
+![st_news](https://user-images.githubusercontent.com/32814703/34471824-89a95b10-ef8d-11e7-8b11-8c55aaf1276c.gif)
+
+
+`summarizer.py`
 - Handles text summary.
 
-**st_email.py**
+`st_email.py`
 - Option to e-mail articles through Gmail.
 - Summarized text is in html format.
 - Original news text is sent as an attachment.
+
+![st1](https://user-images.githubusercontent.com/32814703/34471794-73e9bd16-ef8c-11e7-930e-292b96ffa6f7.png)
+
+![st2](https://user-images.githubusercontent.com/32814703/34471793-73646396-ef8c-11e7-89fc-7f61ae9f25ca.png)
 
 ## Configuration
 
 Configure your settings in news_config.py and email_config.py.
 
-#### News settings -- news_config.py
+#### News settings `news_config.py`
 
 1. Toggle to search for only today's news. Set to True if you only want to pull news articles that were published today. 
 ```
@@ -67,7 +74,7 @@ st_tags = [
 ]
 ```
 
-#### E-mail/Gmail settings -- email_config.py
+#### E-mail/Gmail settings `email_config.py`
 
 Gmail is used in st_email.py. Ensure that ["Allow less secure apps" is turned on](https://support.google.com/accounts/answer/6010255?hl=en) for the gmail account.
 
