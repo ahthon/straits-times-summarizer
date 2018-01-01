@@ -73,7 +73,7 @@ Gmail is used in st_email.py. Ensure that ["Allow less secure apps" is turned on
 
 1. Toggle send e-mail function. Set to True to enable; False to disable.
 ```
-send_email = False
+email_news = False
 ```
 
 2. User's gmail details.
