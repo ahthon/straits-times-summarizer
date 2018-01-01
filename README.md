@@ -92,6 +92,6 @@ send_to = [
 
 ## Author
 
-* [**ahthon**] (https://github.com/ahthon)
+* [**ahthon**](https://github.com/ahthon)
 
 Feel free to contact me if you run into issues or have suggests for improvement.
