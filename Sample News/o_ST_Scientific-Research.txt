@@ -1,0 +1,288 @@
+
+SCIENTIFIC RESEARCH
+===================
+
+#442848 Researchers create 'Iron Man' suit for proteins [Singapore]
+
+http://www.straitstimes.com/singapore/researchers-create-iron-man-suit-for-proteins
+
+By: Raffaella Nathan Charles
+
+29 Dec 2017, 05:00 Hours
+
+There are more ways to fold proteins than there are atoms in the universe, says Assistant Professor Chester Drum of the National University of Singapore's Yong Loo Lin School of Medicine.
+
+But the assistant professor from the medicine and biochemistry departments has figured out a first - a way to fold a protein using a highly stable shell which wraps around the unfolded substrate, moulding it like hands mould clay, and then protecting it from harm.
+
+Because a protein's shape influences what it can do, this potentially allows Prof Drum and his team to create a tough version of a protein that the body needs, and which could in future help in the treatment of a disease like cancer.
+
+The breakthrough was published in the prestigious journal Nature Communications this month.
+
+The researchers had experimented on a protein in an unusual bacterium - Archaeoglobus fulgidus - that is usually found in hot springs and deep-sea vents living in near-boiling water.
+
+They modified the protein found in the bacterium, called ferritin, to make a nanometre-size exoshell. (A nanometre is one-billionth of a metre.) The protein's natural function is to store iron, but the team re-engineered the natural product to encapsulate a different protein .
+
+This made a Russian-doll-type arrangement where one protein was encased within another.
+
+"We knew that it would be very resilient to our experiments," said Prof Drum, who is also a consultant cardiologist at the National University Hospital. "It's essentially an 'Iron Man' suit, an armour that protects and transports the protein."
+
+In the tests, the scientists first changed the pH level of the shell that they had engineered, breaking it apart. They then inserted the new protein into the shell before changing the pH back to close the shell.
+
+The researchers did this on three different "proteins of interest", showing the technology can be used to fold and protect a variety of proteins over 10,000 times smaller than the width of a human hair.
+
+The exoshells protected the proteins against a wide range of stressors, including extreme heat and harsh chemicals.
+
+"Our highly engineered method means we can specifically guide the folding process, even in a test tube, outside of organs. This makes it more relevant to biological and therapeutic production," said Prof Drum.
+
+The next step, he added, is to work with biopharmaceutical companies to make the exoshell faster and in large quantities. Prof Drum said the exoshell may have the potential to transport substances like antibiotic drugs, or target enzymes and proteins to disease sites in the body, such as an ailing liver or heart.
+
+The team is now using the shell to treat cancer in an experimental animal model and expects to have results within the next year.
+
+Commenting on the effort, Dr Swaine Chen, a senior research scientist at the Agency for Science, Technology and Research's Genome Institute of Singapore, said: "The research shows a very clever application of protein engineering in the realm of synthetic biology, especially with the ability to make these proteins stable."
+
+While the research may not be clinically applicable instantly, it does solve problems with protein production, especially those that are tough to produce in big quantities, he added.
+
+['SCIENTIFIC RESEARCH', 'NUS', 'MEDICAL RESEARCH']
+
+***
+
+#442869 The making of artisanal proteins for human bodies [Health]
+
+http://www.straitstimes.com/singapore/health/the-making-of-artisanal-proteins-for-human-bodies
+
+By: --
+
+29 Dec 2017, 05:00 Hours
+
+Our bodies make roughly 20,000 different kinds of proteins, from the collagen in our skin to the haemoglobin in our blood. Some take the shape of molecular sheets. Others are sculpted into fibres, boxes, tunnels, even scissors.
+
+A protein's particular shape enables it to do a particular job, whether ferrying oxygen through the body or helping to digest food.
+
+Scientists have studied proteins for nearly two centuries, and in that time, they have worked out how cells create them from simple building blocks. They have long dreamt of assembling those elements into new proteins not found in nature.
+
+But they have been stumped by one great mystery: how the building blocks in a protein take their final shape. Dr David Baker, 55, director of the Institute for Protein Design at the University of Washington, has been investigating that enigma for a quarter-century.
+
+Now, it looks as if he and his colleagues have cracked it. Thanks in part to crowdsourced computers and smartphones belonging to over one million volunteers, the scientists have figured out how to choose the building blocks required to create a protein that will take on the shape they want.
+
+In a series of papers published this year, Dr Baker and his colleagues unveiled the results of this work. They have produced thousands of different kinds of proteins, which assume the shape the scientists had predicted. Often those proteins are profoundly different from any found in nature.
+
+This expertise has led to a profound scientific advance: cellular proteins designed by man, not by nature. "We can now build proteins from scratch from first principles to do what we want," Dr Baker said.
+
+SEEKING PROTECTION It would be nice to have a front-line drug if a new pandemic was about to happen. PROFESSOR IAN WILSON, a virologist at Scripps Research Institute, on HB1.6928.2.3 - the protein which has yet to prove its worth in human trials.
+
+Scientists soon will be able to construct precise molecular tools for a range of tasks, he says. Already, his team has built proteins for purposes such as fighting flu viruses, breaking down gluten and detecting trace amounts of opioid drugs.
+
+Molecular biologist William DeGrado at the University of California said the studies by Dr Baker and his colleagues represent a milestone in this scientific inquiry. "In the 1980s, we dreamt about having such impressive outcomes," he said.
+
+Every protein in nature is encoded by a gene. With that stretch of DNA as its guide, a cell assembles a corresponding protein from building blocks known as amino acids. Selecting from 20 or so different types, the cell builds a chain of amino acids. That chain may stretch dozens, hundreds or even thousands of units long. Once the cell finishes, the chain folds on itself, typically in just a few hundredths of a second.
+
+Proteins fold because each amino acid has an electric charge. Parts of the protein chain are attracted to one another while other parts are repelled. Some bonds between the amino acids will yield easily under these forces; rigid bonds will resist.
+
+The combination of all these atomic forces makes each protein a staggering molecular puzzle. When Dr Baker attended graduate school at the University of California, Berkeley, no one knew how to look at a chain of amino acids and predict the shape into which it would fold. Protein scientists referred to the enigma simply as "the folding problem". The folding problem left scientists in the Stone Age when it came to manipulating these important biological elements. They could only use proteins that they happened to find in nature, like early humans finding sharp rocks to cut meat from bones.
+
+We have used proteins for thousands of years. Early cheese-makers, for example, made milk curdle by adding a piece of calf stomach to it. The protein chymosin, produced in the stomach, turned liquid milk into a semisolid form.
+
+Today scientists are still looking for ways to harness proteins. Some researchers are studying proteins in abalone shells in hopes of creating stronger body armour, for instance. Others are investigating spider silk for making parachute cords. Researchers also are experimenting with modest changes to natural proteins to see if the tweaks let them do new things.
+
+To Dr Baker and many other protein scientists, however, this sort of tinkering has been deeply unsatisfying. The proteins found in nature represent only a minuscule fraction of the "protein universe" - all the proteins that could possibly be made with varying combinations of amino acids.
+
+"When people want a new protein, they look around in nature for things that already exist," Dr Baker said. "There's no design involved."
+
+Dr Baker has an elfin face, a cheerful demeanour, hair that can verge on chaotic, and a penchant for wearing T-shirts to scientific presentations. But his appearance belies a relentless drive. After graduating from Berkeley and moving to the University of Washington, he joined the effort to solve the folding problem. He and his colleagues took advantage of the fact that natural proteins are somewhat similar to one another.
+
+New proteins do not just pop into existence; they all evolve from ancestral proteins. Whenever scientists figured out the shape of a particular protein, they were able to make informed guesses about the shapes of related ones. Scientists also relied on the fact that many proteins are made of similar parts. One common feature is a spiral stretch of amino acids called an alpha helix. Researchers learnt how to recognise the series of amino acids that fold into these spirals.
+
+In the late 1990s, the team at the University of Washington turned to software for individual studies of complex proteins. The lab decided to create a common language for all this code, so that researchers could access the collective knowledge about proteins.
+
+In 1998, they started a platform called Rosetta, which scientists use to build virtual chains of amino acids and then compute the most likely form they will fold into.
+
+A community of protein scientists, known as the Rosetta Commons, grew around the platform. For the past 20 years, they have been improving the software and using it to better understand the shape of proteins - and how those shapes enable them to work.
+
+In 2005, Dr Baker launched a program called Rosetta@home, which recruited volunteers to donate processing time on their home computers and, eventually, Android phones. During the past 12 years, 1,266,542 people have joined the Rosetta@home community.
+
+Step by step, Rosetta grew more powerful and more sophisticated, and the scientists were able to use the crowdsourced processing power to simulate folding proteins in greater detail. Their predictions grew startlingly more accurate.
+
+The researchers went beyond proteins that exist to proteins with unnatural sequences. To see what these unnatural proteins looked like in real life, the scientists synthesised genes for them and plugged them into yeast cells, which then manufactured the lab's creations.
+
+"There are subtleties going on in naturally occurring proteins that we still don't understand," Dr Baker said. "But we've mostly solved the folding problem." These advances gave his team the confidence to take on an even bigger challenge: They began to design proteins from scratch for particular jobs. The researchers would start with a task they wanted a protein to do, and then figure out the string of amino acids that would fold the right way to get the job done.
+
+In one of their experiments, they teamed up with Professor Ian Wilson, a virologist at Scripps Research Institute, to devise a protein to fight the flu. Prof Wilson has been searching ways to neutralise the infection, and his lab had identified one particularly promising target: a pocket on the surface of the virus. If scientists could make a protein that fit snugly in that pocket, it might prevent the virus from slipping into cells.
+
+Dr Baker's team used Rosetta to design such a protein, narrowing their search to several thousand chains of amino acids that might do the job. They simulated the folding of each one, looking for the combinations that might fit into the viral niche.
+
+The researchers then used engineered yeast to turn the semifinalists into real proteins. They turned the proteins loose on the flu viruses. Some grabbed onto the viruses better than others, and the researchers refined their molecular creations until they ended up with one they named HB1.6928.2.3.
+
+To see how effective it was at stopping flu infections, they ran experiments on mice. They sprayed the protein into the noses of mice and then injected them with a heavy doses of influenza, which normally would be fatal.
+
+But the protein provided 100 per cent protection from death. It remains to be seen if HB1.6928.2.3 can prove its worth in human trials. "It would be nice to have a front-line drug if a new pandemic was about to happen," Prof Wilson said.
+
+HB1.6928.2.3 is just one of a number of proteins that Dr Baker and his colleagues have designed and tested. They have also made a molecule that blocks the toxin that causes botulism, and one that can detect tiny amounts of the opioid fentanyl. Yet another protein may help people who cannot tolerate gluten by cutting apart gluten molecules in food.
+
+Recently, Dr Baker's team presented one of its most ambitious projects: a protein shell that can carry genes. The researchers designed proteins that assemble themselves like Legos, snapping together into a hollow sphere. In the process, they can also enclose genes and can carry that cargo safely for hours in the bloodstream of mice. These shells bear some striking resemblances to viruses, although they lack the molecular wherewithal to invade cells. "We sometimes call them not-a-viruses," Dr Baker said.
+
+A number of researchers are experimenting with viruses as a means for delivering genes through the body. These genes can reverse hereditary disorders; in other experiments, they show promise as a way to reprogramme immune cells to fight cancer.
+
+But as the product of billions of years of evolution, viruses often do not perform well as gene mules. "If we build a delivery system from the ground up, it should work better," Dr Baker said.
+
+Dr Gary Nabel, chief scientific officer at Sanofi, said that the new research may lead to the invention of molecules we cannot yet imagine. "It's a new territory, because you're not modelling existing proteins," he said.
+
+For now, Dr Baker and his colleagues can only make short-chained proteins. That is due in part to the cost involved in making pieces of DNA to encode proteins.
+
+But that technology is improving so quickly that the team is now testing longer, bigger proteins that might do more complex jobs - among them fighting cancer.
+
+In cancer immunotherapy, the immune system recognises cancer cells by the distinctive proteins on their surface. The immune system relies on antibodies that can recognise only a single protein. Dr Baker wants to design proteins that trigger a response only after they lock onto several kinds of proteins on the surface of cancer cells at once. He suspects these molecules will be better able to recognise cancer cells while leaving healthy ones alone.
+
+Essentially, he said, "we're designing molecules that can do simple logic calculations". Indeed, he hopes eventually to make molecular machines.
+
+Our cells generate fuel with one such engine, a gigantic protein called ATP synthase, which acts like a kind of molecular waterwheel. As positively-charged protons pour through a ring of amino acids, it spins a hundred times a second. ATP synthase harnesses that energy to build a fuel molecule called ATP. It should be possible to build other such complex molecular machines as scientists learn more about how big proteins take shape, Dr Baker said.
+
+"There's a lot of things that nature has come up with just by randomly bumbling around," he said. "As we understand more and more of the basic principles, we ought to be able to do far better."
+
+NYTIMES
+
+READ MORE: World's first protein-based atomic "Iron Man" suit
+
+['SCIENCE', 'SCIENTIFIC RESEARCH']
+
+***
+
+#442657 Japanese researcher develops self-healing glass that could triple life of everyday products [East-Asia]
+
+http://www.straitstimes.com/asia/east-asia/japanese-researcher-develops-self-healing-glass-that-could-triple-life-of-everyday
+
+By: --
+
+28 Dec 2017, 11:23 Hours
+
+TOKYO (AFP) - A Japanese researcher has developed - by accident- a new type of glass that can be repaired simply by pressing it back together after it cracks.
+
+The discovery opens the way for super-durable glass that could triple the lifespan of everyday products like car windows, construction materials, fish tanks and even toilet seats.
+
+Dr Yu Yanagisawa, a chemistry researcher at the University of Tokyo, made the breakthrough by chance while investigating adhesives that can be used on wet surfaces.
+
+Does this mean you will soon be able to repair those cracks in your smartphone with a quick press of the fingers? Or surreptitiously piece together a shattered beer glass dropped after one pint too many?
+
+Well, not quite. Not now and in fact, not in the near future.
+
+But it does open a window of opportunity for researchers to explore ways to make more durable, lightweight, glass-like items, like car windows.
+
+In a lab demonstration for AFP, Dr Yanagisawa broke a glass sample into two pieces.
+
+He then held the cross sections of the two pieces together for about 30 seconds until the glass repaired itself, almost resembling its original form.
+
+To demonstrate its strength, he then hung a nearly full bottle of water from the piece of glass - and it stayed intact.
+
+The organic glass, made of a substance called polyether thioureas, is closer to acrylic than mineral glass, which is used for tableware and smartphone screens.
+
+Other scientists have demonstrated similar properties by using rubber or gel materials but Dr Yanagisawa was the first to demonstrate the self-healing concept with glass.
+
+The secret lies in the thiourea, which uses hydrogen bonding to make the edges of the shattered glass self-adhesive, according to Dr Yanagisawa's study.
+
+But what use is all this if it cannot produce a self-healing smartphone screen?
+
+"It is not realistically about fixing what is broken, more about making longer-lasting resin glass," Dr Yanagisawa told AFP.
+
+Glass products can fracture after years of use due to physical stress and fatigue.
+
+"When a material breaks, it has already had many tiny scars that have accumulated to result in major destruction," Dr Yanagisawa said.
+
+"What this study showed was a path toward making a safe and long-lasting resin glass", which is used in a wide range of everyday items.
+
+"We may be able to double or triple the lifespan of something that currently lasts for 10 or 20 years", he said.
+
+['JAPAN', 'SCIENTIFIC RESEARCH']
+
+***
+
+#441105 Making water research pay off [Singapore]
+
+http://www.straitstimes.com/singapore/making-water-research-pay-off
+
+By: Samantha Boh
+
+22 Dec 2017, 05:00 Hours
+
+Q How did Nanyang Environment and Water Research Institute (Newri) come about?
+
+A About 12 or 13 years ago, there were discussions among various government agencies on the issue of water here. It is a fact that we have a water security situation, but that doesn't mean we cannot do something about it, nor does it mean, if we are able to resolve the issue, we should just sit around and not think beyond that. If we can resolve our situation, then why should we not consider making it a business? And when we are successful, then what next?
+
+To address the first issue, it would be better if we have our own expertise so we know what we are buying, and then ask ourselves if we can do better. That is important. If we want to make it a business, then we need to eventually be as good or better than potential competitors. That's the backdrop.
+
+As for the second issue, there were two things we needed to consider: Do we have enough warm bodies and do we have the know-how? It is a challenging chicken and egg problem. If we do not have the warm bodies, we cannot create the know-how, and if you don't have the know-how, you cannot generate enough excitement to attract the first batch of warm bodies and create the next batch of warm bodies.
+
+Q So how did you set it up?
+
+A When I first came to NTU I had only two people with me - a personal assistant and a senior administration manager. Why did I not start with researchers? The one thing that I wanted to be very sure of was that I was totally non-threatening to my incumbent colleagues - that is to say, I had every intention to be inclusive. If I had come with a team of new researchers, my colleagues would have thought I had no need of them. The approach was I formed a transparent administrative structure first, which could manage our research needs. Thereafter I went to my colleagues to inform them that as I have no research team with me, I needed their help to make this research organisation work.
+
+Q How big is the team now?
+
+A As of July this year, we had 80 to 100 in the faculty. They formed their teams of researchers and the research staff strength has grown to about 120. The number of PhD students is at about 100 to 150.
+
+Q What do you consider to be one of Newri's biggest achievements?
+
+A At the academic level, we managed to create a platform where people from different disciplines can come together and work together. If you walk down to the laboratories, you will find that we purposely do not allow walls unless there is a safety requirement.
+
+BREAKING DOWN THE WALLS At the academic level, we managed to create a platform where people from different disciplines can come together and work together. If you walk down to the laboratories, you will find that we purposely do not allow walls unless there is a safety requirement. PROFESSOR NG WUN JERN, on what he considers to be one of Nanyang Environment and Water Research Institute's greatest achievements.
+
+Q What is your biggest takeaway?
+
+A I have always thought of Newri as an "experiment" in "non-classical" research and development management, and my main takeaway at the end of a 10-year-long "experiment" is yes, this blending of good research with translation and development leading to industry relevance can be done.
+
+As a professor, what I would have liked to do is go to the lab, do what piques my curiosity, have enough resources to support my curiosity-driven work, publish many papers and share the knowledge gained with fellow researchers. However, what Newri had required of its professors is to continue to be like this, but also to be something more. We are trained to do research and may believe it is the be-all and end-all. But research without market deployment is not a sustainable activity. It became necessary for myself first, and then my colleagues to understand that research is the beginning and that good research must not end at research.
+
+Q What is next for Newri?
+
+A My original plan was 15 years but now, after 10 years, we are already close to achieving what we set out to do. Now it is at the stage where we have a portfolio of intellectual property and we can start to talk about the industry. It is time to "monetise" the research. We must never forget that research is a cost and, at some point in time, we need to realise monetary value.
+
+If we don't have that monetary value completing the loop, the research is not sustainable. Ten years down the road, it is time to take that research and go see if it makes sense to the industry and the national economy.
+
+['SCIENCE', 'SCIENTIFIC RESEARCH', 'NTU']
+
+***
+
+#441106 Nature's gifts galore on Christmas Island [Environment]
+
+http://www.straitstimes.com/singapore/environment/natures-gifts-galore-on-christmas-island
+
+By: Audrey Tan
+
+22 Dec 2017, 05:00 Hours
+
+With a name like that, one would expect Christmas Island to bear many gifts. It has not disappointed.
+
+Among its treasures is the red crab (Gecarcoidea natalis) - a crustacean unique to the Indian Ocean island. These creatures move en masse from forest to sea to spawn once a year, turning roads and homes a bright red, in a phenomenon that famed naturalist David Attenborough reportedly regards as one of the most "astonishing and wonderful" sights.
+
+But Christmas Island, about an hour's flight from Jakarta, has more surprises in store, as Singapore scientists are discovering.
+
+Over four expeditions since 2010, the team has discovered 10 species of crabs and prawns, including the blue crab and the yellow-eye crab, which also cannot be found anywhere else in the world.
+
+This festive season, people can get a glimpse of these creatures without having to travel all the way to the island that once belonged to Singapore. Specimens of the unique creatures are on display at the Lee Kong Chian Natural History Museum, in a temporary exhibition called Christmas Island Red launched on Monday.
+
+"It highlights the historical links between both islands - Singapore and Christmas Island - why conservation is important, and the discoveries we've made. Our predecessors in the 1930s and 1950s described many new species and we continue with this tradition," said crab expert and museum head Peter Ng, who led the expeditions.
+
+Christmas Island was named on Christmas Day in 1643, and was part of Singapore until 1957, when it was sold by the British to the Australian government for £2.9 million, according to the website of the Christmas Island Tourism Association.
+
+But close ties remain, especially in research, between the Republic and Christmas Island, which has a population of about 2,000. More expeditions are planned.
+
+"There was the assumption that the island's fauna was well-known, as it is located so close to Indonesia. But we found that there is still so many things left to discover," said Professor Ng.
+
+"There have been about 400 to 500 species recorded on the island, but I think that is a gross underestimate because the island is actually not easy to survey as it has a very rugged landscape - land and sea."
+
+Despite its welcoming name, Christmas Island is surrounded by inhospitable rocky cliffs which hampered early explorers. But Prof Ng and his team saw opportunity in adversity. "I was intrigued by why no one had found a freshwater cave crab, even though the island had so many limestone caves. So I looked for caves with the Australian Parks people, went into them, laid traps... and lo and behold, we caught two new species of crabs - Orcovita hicksi and Orcovita orchardorum, and a new prawn (Macrobrachium xmas). Why had no one caught them before? Because they are few and scattered in a big cave system. Traps worked best!"
+
+But Prof Ng considers his best discovery on the island to be the blue crab, which has a unique shell the colour of the sky. The crab was previously thought to be a unique colour form of the widely distributed land crab, Discoplax hirtipes.
+
+But in 2012, Prof Ng and crustacean expert Peter Davie from the Queensland Museum discovered otherwise, after extensive study of museum and fresh specimens from Christmas Island and the whole Indo-West Pacific region.
+
+"I had long known the blue crab was a problem," said Prof Ng. "I have been studying these crabs for the better part of a decade. When you put all the specimens from all over together, the differences are clear. And genetics has confirmed what we have seen."
+
+Discoveries are not always the result of breaking new ground, finding new habitats, or luck, he said.
+
+"Very often, discoveries are the result of cumulative knowledge and patience - to slowly build up a case, build up the evidence and the comparative material. It comes to a prepared mind and a careful build-up. The blue crab, which we named Discoplax celeste, is such a discovery."
+
+Australian High Commissioner Bruce Gosper, who was at the launch of the exhibition, said: "The work we're doing in this area is something that's been enhanced in recent years through the comprehensive strategic partnership between Australia and Singapore."
+
+['SCIENCE', 'ENVIRONMENTAL ISSUES', 'WILDLIFE', 'SCIENTIFIC RESEARCH']
+
+***
+
