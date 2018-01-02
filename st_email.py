@@ -232,4 +232,3 @@ def send_email(gmail_user, gmail_pwd, send_to):
     print("")
 
     print("  All e-mails sent.")
-    del_email_files()
