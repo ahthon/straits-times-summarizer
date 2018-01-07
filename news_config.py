@@ -4,10 +4,20 @@ User settings for news.
 import os
 
 # Toggle today's news. Set to True if you only want to pull today's news.
+# Default: False
 todays_news = False
 
+
 # Number of news articles (top headlines) you want to pull per category.
+# Default: 5
 headline_count = 5
+
+
+# Set the length of summary text.
+# Summary length is relative to original text.
+# Default: 0.3 (number of sentences is reduced by 70%)
+percent_reduce = 0.3
+
 
 # Categories to pull top headlines from.
 # Comment to exclude category; decomment to include it.
@@ -34,7 +44,9 @@ st_tags = [
 for tag in st_tags:
     st_categories.append(tag)
 
-# Delete any old text file
+
+# Deletes any old text file.
+# Comment to disable.
 folder = os.listdir()
 for f in folder:
     if f.endswith(".txt"):
