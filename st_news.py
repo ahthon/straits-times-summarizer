@@ -2,7 +2,7 @@
 STRAITS TIMES SUMMARIZER
 Author: ahthon
 Date created: 14 Oct 2017
-Date last modified: 2 Jan 2018
+Date last modified: 7 Jan 2018
 """
 
 import re
@@ -11,15 +11,15 @@ import statistics
 import sys
 import time
 
-from news_config import *
 from email_config import *
+from news_config import *
+from st_email import send_email
+from st_summarizer import get_summary
 
 from bs4 import BeautifulSoup
 from newspaper import fulltext
 from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize import sent_tokenize
-from st_email import send_email
-from summarizer import get_summary
 from urllib import request
 
 st_summarizer = """
@@ -43,19 +43,19 @@ def html_soup(url):
     return(html_soup)
 
 
-def get_urls_of_cat(cat_soup, headline_count):
-    """Returns urls of the headlines of a certain news category.
+def get_urls_of_cat(cat_soup, url_count):
+    """Returns article urls of a certain news category.
     """
     st_url = "http://www.straitstimes.com"
-    headlines = str(cat_soup.find_all(
-        "span", class_="story-headline", limit=headline_count))
-    hrefs = re.findall('href=\"(.*?)\"', headlines)
+    art_urls = str(cat_soup.find_all(
+        "span", class_="story-headline", limit=url_count))
+    hrefs = re.findall('href=\"(.*?)\"', art_urls)
     urls = [st_url+url for url in hrefs if hrefs and "javascript" not in url]
     return(urls)
 
 
 def get_cat_in_url(url):
-    """Returns an article's category from its url.
+    """Returns an art's category from its url.
     """
     pattern = "straitstimes.com/(\w*)/"
     cat = re.search(pattern, url)
@@ -67,7 +67,7 @@ def get_cat_in_url(url):
 
 
 def get_subcat_in_url(url):
-    """Returns an article's subcategory from its url.
+    """Returns an art's subcategory from its url.
     """
     pattern = "straitstimes.com/\w*/([a-z-].*)/"
     subcat = re.search(pattern, url)
@@ -82,20 +82,20 @@ def get_subcat_in_url(url):
         return(None)
 
 
-def get_article_title(article_soup):
+def get_art_title(art_soup):
     """Returns news title.
     """
-    title = article_soup.find("h1", class_="headline node-title")
+    title = art_soup.find("h1", class_="headline node-title")
     title = title.string
     return(title)
 
 
-def get_article_byline(article_soup):
+def get_art_byline(art_soup):
     """Returns news byline/author. Returns '--' if none is found.
     """
-    author = article_soup.find(
+    author = art_soup.find(
         "div", class_="author-field author-name")
-    designation = article_soup.find(
+    designation = art_soup.find(
         "div", class_="author-designation author-field")
 
     if author and designation:
@@ -109,43 +109,43 @@ def get_article_byline(article_soup):
         return("--")
 
 
-def get_article_text(article_url):
+def get_art_text(art_url):
     """Returns news text
     """
-    html = requests.get(article_url).text
+    html = requests.get(art_url).text
     text = fulltext(html)
     return(text)
 
 
-def get_article_js(article_soup):
-    """Returns article's html (script tag)
+def get_art_js(art_soup):
+    """Returns art's html (script tag)
     """
-    script = str(article_soup.find_all("script", limit=3)[-1])
+    script = str(art_soup.find_all("script", limit=3)[-1])
     return(script)
 
 
-def get_article_id(article_js):
-    """ Returns article ID.
+def get_art_id(art_js):
+    """ Returns art ID.
     """
     target = '"articleid".*"(\d*)"'
-    article_id = re.search(target, article_js)
-    if article_id:
-        return(article_id.group(1))
+    art_id = re.search(target, art_js)
+    if art_id:
+        return(art_id.group(1))
 
 
-def get_article_datetime(article_js):
+def get_art_datetime(art_js):
     """Returns publication date and time (yyyy:mm:dd hh:mm) of news.
     """
     target = "(\d{4}:\d{2}:\d{2}\s\d{2}:\d{2})"
-    pubdate = re.search(target, article_js)
+    pubdate = re.search(target, art_js)
     if pubdate:
         return(pubdate.group(1).split(" "))
 
 
-def get_article_date(article_datetime):
-    """Returns article's published datetime.
+def get_art_date(art_datetime):
+    """Returns art's published datetime.
     """
-    pubdate = article_datetime[0]
+    pubdate = art_datetime[0]
     date = pubdate.split(":")
 
     year = date[0]
@@ -153,45 +153,34 @@ def get_article_date(article_datetime):
     day = date[2]
 
     months = {
-        "01": "Jan",
-        "02": "Feb",
-        "03": "Mar",
-        "04": "Apr",
-        "05": "May",
-        "06": "Jun",
-        "07": "Jul",
-        "08": "Aug",
-        "09": "Oct",
-        "10": "Sep",
-        "11": "Nov",
-        "12": "Dec"
-    }
+        "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr",
+        "05": "May", "06": "Jun", "07": "Jul", "08": "Aug",
+        "09": "Oct", "10": "Sep", "11": "Nov", "12": "Dec"}
 
     month_name = months.get(month)
+    art_date = "{} {} {}".format(day, month_name, year)
+    return(art_date)
 
-    article_date = "{} {} {}".format(day, month_name, year)
-    return(article_date)
 
-
-def get_article_time(article_datetime):
-    """Returns article's published time.
+def get_art_time(art_datetime):
+    """Returns art's published time.
     """
-    pubtime = article_datetime[1]
-    article_time = pubtime + " Hours"
-    return(article_time)
+    pubtime = art_datetime[1]
+    art_time = pubtime + " Hours"
+    return(art_time)
 
 
-def get_article_keywords(article_js):
+def get_art_keywords(art_js):
     """Returns a list of news topics/tags.
     """
     target = '"keyword".*"(.*)"'
-    keyword = re.search(target, article_js)
+    keyword = re.search(target, art_js)
     if keyword:
         keywords = keyword.group(1).split(",")
     return(keywords)
 
 
-def print_tofile(text, file, lbreak=True):
+def print_to_file(text, file, lbreak=True):
     """Prints to file some text.
     """
     print(text, file=file)
@@ -204,7 +193,7 @@ def print_tofile(text, file, lbreak=True):
 def print_divider(file):
     """Prints fancy divider.
     """
-    print_tofile("***", file)
+    print_to_file("***", file)
 
 
 def word_count(text):
@@ -222,163 +211,155 @@ def sent_count(text):
     return(count)
 
 
-def main(todays_news, email_news):
+def main(percent_reduce, todays_news, email_news):
 
     # today's date
-    date_now = time.strftime("%d %b %Y")
+    date_today = time.strftime("%d %b %Y")
     print(st_summarizer)
-    print("  Collecting news for {}.\n".format(date_now))
+    print("  Collecting news for {}.\n".format(date_today))
 
     # statistics and counters
     reduction = []
     summarized = 0
-    articles_fetched = 0
+    arts_fetched = 0
 
-    # news categories' html soup
-    print("  Fetching categories...")
-    for (cat, cat_url, fname) in st_categories:
+    # news categories
+    print("  Categories fetched: {}".format(len(st_categories)))
+    for (cat, cat_url, filename) in st_categories:
         print("\t[{}]".format(cat))
-    print("  Categories fetched: {}\n".format(len(st_categories)))
 
     # urls of articles for each category
-    print("  Fetching articles...")
-    st_cats = []
-    for (cat, cat_url, fname) in st_categories:
-        cat_html = html_soup(cat_url)
-        headlines = get_urls_of_cat(cat_html, headline_count)
-        st_cats.append((headlines, cat, fname))
-        articles_fetched += len(headlines)
-    print("  Articles fetched: {}\n".format(articles_fetched))
+    st_cats_urls = []
+    for (cat, cat_url, filename) in st_categories:
+        art_urls = get_urls_of_cat(html_soup(cat_url), headline_count)
+        st_cats_urls.append((art_urls, cat, filename))
+        arts_fetched += len(art_urls)
+    print("\n  Articles fetched: {}\n".format(arts_fetched))
 
-    st_articles = [cat for cat in st_cats]
+    st_arts = [cat for cat in st_cats_urls]
+    with open("ST_News-Headlines.txt", "w", encoding="utf8") as email_file:
+        print("  Summarizing articles...\n")
+        print_to_file(
+            "News headlines on {}\n".format(date_today),
+            email_file)
 
-    # text file containing headlines for e-mail
-    emailfile = open("ST_News-Headlines.txt", mode="w", encoding="utf8")
-    date = time.strftime("%d %b %Y")
-    print_tofile("News headlines on {}".format(date), emailfile)
+        # look at each news category
+        for (art_urls, cat, filename) in st_arts:
+            print("  "+cat.upper())
+            cat_title = "\n{}\n{}".format(cat.upper(), "="*len(cat))
 
-    print("  Summarizing articles...\n")
-    # look at each news category
-    for (headlines, cat, fname) in st_articles:
-        print("  "+cat.upper())
-        cat_title = "\n"+cat.upper()+"\n"+"="*len(cat)
+            summary_filename = "s_"+filename
+            news_filename = "o_"+filename
 
-        # output, summary
-        sumfname = "s_"+fname
-        sumfile = open(sumfname, mode="w", encoding="utf8")
-        print_tofile(cat_title, sumfile)
+            with open(summary_filename, "w", encoding="utf8") as summ_file:
+                with open(news_filename, "w", encoding="utf8") as news_file:
+                    print_to_file(cat_title, summ_file)
+                    print_to_file(cat_title, news_file)
+                    print_to_file(cat_title, email_file, lbreak=False)
 
-        # output, original
-        newsfname = "o_"+fname
-        newsfile = open(newsfname, mode="w", encoding="utf8")
-        print_tofile(cat_title, newsfile)
+                    art_count = 0  # number of arts fetched
 
-        # output, news headlines
-        print_tofile(cat_title, emailfile, lbreak=False)
+                    for art_url in art_urls:
 
-        # article count
-        article_count = 0
+                        # word count
+                        word_count_summ = 0
+                        word_count_news = 0
 
-        # look at each news article
-        for article_url in headlines:
+                        # article data
+                        art_html = html_soup(art_url)
+                        art_js = get_art_js(art_html)
+                        art_datetime = get_art_datetime(art_js)
+                        art_date = get_art_date(art_datetime)
+                        art_time = get_art_time(art_datetime)
 
-            # word count
-            wcount_summ = 0
-            wcount_news = 0
+                        if todays_news is True and art_date != date_today:
+                            # skip to next article if it's not published today
+                            continue
+                        else:
+                            art_count += 1
+                            cat_in_url = get_cat_in_url(art_url)
+                            subcat_in_url = get_subcat_in_url(art_url)
 
-            # news article data
-            article_html = html_soup(article_url)
-            article_js = get_article_js(article_html)
-            article_datetime = get_article_datetime(article_js)
-            article_date = get_article_date(article_datetime)
-            article_time = get_article_time(article_datetime)
+                            # get news subcategory;
+                            # otherwise, get main category
+                            if subcat_in_url is None:
+                                subcat_in_url = cat_in_url
 
-            if todays_news is True and article_date != date_now:
-                # skip to next article if it's not published today
-                continue
-            else:
-                article_count += 1
-                cat_in_url = get_cat_in_url(article_url)
-                subcat_in_url = get_subcat_in_url(article_url)
+                        art_id = "#{}".format(get_art_id(art_js))
+                        art_title = art_id+" "+get_art_title(art_html)
+                        art_byline = get_art_byline(art_html)
+                        art_keywords = get_art_keywords(art_js)
+                        art_text = get_art_text(art_url)
+                        word_count_news += word_count(art_text)
 
-                # get news subcategory; otherwise, get main category
-                if subcat_in_url is None:
-                    subcat_in_url = cat_in_url
+                        print(
+                            "\t{0:02d}.".format(art_count),
+                            "[{}]{}".format(art_date, art_title[len(art_id):])
+                        )
 
-            article_id = "#{}".format(get_article_id(article_js))
-            article_title = article_id+" "+get_article_title(article_html)
-            article_byline = get_article_byline(article_html)
-            article_keywords = get_article_keywords(article_js)
-            article_text = get_article_text(article_url)
-            wcount_news += word_count(article_text)
+                        # output, news headlines
+                        print_to_file("[{}] {}\n{}".format(
+                            art_date, art_title, art_url),
+                            email_file
+                        )
 
-            print(
-                "\t{0:02d}.".format(article_count),
-                "[{}]{}".format(article_date, article_title[len(article_id):])
-            )
+                        # output, news summary
+                        print_to_file(art_title, summ_file)
+                        print_to_file(art_url, summ_file)
+                        print_to_file("By: "+art_byline, summ_file)
+                        print_to_file(art_date+", "+art_time, summ_file)
 
-            # output, news headlines
-            print_tofile("[{}] {}\n{}".format(
-                article_date, article_title, article_url),
-                emailfile
-            )
+                        # length of summary
+                        sents_in_summary = int(
+                            percent_reduce*sent_count(art_text)
+                            )
 
-            # output, news summary
-            print_tofile(article_title, sumfile)
-            print_tofile(article_url, sumfile)
-            print_tofile("By: "+article_byline, sumfile)
-            print_tofile(article_date+", "+article_time, sumfile)
+                        # summarized text
+                        art_summary = get_summary(art_url, sents_in_summary)
+                        art_lead = sent_tokenize(art_text)[0]
+                        if art_lead not in art_summary[0:1]:  # includes lead
+                            print_to_file(art_lead, summ_file)
+                            word_count_summ += word_count(art_lead)
+                        for sent in art_summary:
+                            print_to_file(sent, summ_file)
+                            word_count_summ += word_count(sent)
 
-            # length of summary
-            sents_in_summary = int(0.3*sent_count(article_text))
+                        print_to_file(art_keywords, summ_file)
+                        print_divider(summ_file)
+                        summarized += 1
 
-            # summarized text
-            article_summary = get_summary(article_url, sents_in_summary)
-            article_lead = sent_tokenize(article_text)[0]
-            if article_lead not in article_summary[0:1]:  # includes lead
-                print_tofile(article_lead, sumfile)
-                wcount_summ += word_count(article_lead)
-            for sent in article_summary:
-                print_tofile(sent, sumfile)
-                wcount_summ += word_count(sent)
+                        # output, original news arts
+                        print_to_file(art_title+" [{}]".format(
+                            subcat_in_url), news_file)
+                        print_to_file(art_url, news_file)
+                        print_to_file("By: "+art_byline, news_file)
+                        print_to_file(art_date+", "+art_time, news_file)
+                        print_to_file(art_text, news_file)
+                        print_to_file(art_keywords, news_file)
+                        print_divider(news_file)
 
-            print_tofile(article_keywords, sumfile)
-            print_divider(sumfile)
-            summarized += 1
+                        # reduction in words
+                        reduction.append(
+                            (word_count_news-word_count_summ)/word_count_news
+                            )
+                    print_divider(email_file)
 
-            # output, original news articles
-            print_tofile(article_title+" [{}]".format(subcat_in_url), newsfile)
-            print_tofile(article_url, newsfile)
-            print_tofile("By: "+article_byline, newsfile)
-            print_tofile(article_date+", "+article_time, newsfile)
-            print_tofile(article_text, newsfile)
-            print_tofile(article_keywords, newsfile)
-            print_divider(newsfile)
-
-            # reduction in words
-            reduction.append((wcount_news-wcount_summ)/wcount_news)
-
-        print_divider(emailfile)
-        sumfile.close()
-        newsfile.close()
-
-        if article_count == 0:  # no news for today
-            print(
-                "\t{0:02d}.".format(article_count),
-                "[{}] [No Updates]".format(date_now)
-            )
-        print("")
+                    if art_count == 0:  # no news for today
+                        print(
+                            "\t{0:02d}.".format(art_count),
+                            "[{}] [No Updates]".format(date_today)
+                        )
+                    print("")
 
     mean_reduction = statistics.mean(reduction)
     stdev_reduction = statistics.stdev(reduction)
     print("  Articles summarized: {}".format(summarized))
-    print("  Mean reduction of words: {:.1f}%, SD: {:.2f}\n".format(
+    print("  Avg. word reduction: {:.1f}%, SD: {:.2f}\n".format(
         (mean_reduction*100), stdev_reduction))
 
-    emailfile.close()
     if email_news is True:
         send_email(gmail_user, gmail_pwd, send_to)
 
 
 if __name__ == "__main__":
-    main(todays_news, email_news)
+    main(percent_reduce, todays_news, email_news)
