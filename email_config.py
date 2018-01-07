@@ -4,7 +4,7 @@ User settings for e-mail.
 
 # Toggle send e-mail function.
 # Set to True to enable; False to disable.
-email_news = False
+email_news = True
 
 # User's gmail details.
 gmail_user = "user@gmail.com"       # user gmail address
