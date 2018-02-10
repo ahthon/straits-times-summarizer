@@ -15,7 +15,7 @@ A set of scripts to scrape for news from The Straits Times and summarize the new
 
 ## Features
 
-`st_news.py`
+Main script: `st_news.py`
 - Summaries of news articles (TexRank summarization).
 - Article's tags, author, and the date/time it was published.
 - Outputs summaries, original texts, and news headlines as .txt files.
