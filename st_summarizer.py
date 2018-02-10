@@ -6,7 +6,7 @@ from sumy.nlp.stemmers import Stemmer
 from sumy.utils import get_stop_words
 
 
-def get_summary(url, sent_count=10):
+def summarize(url, sent_count=10):
     """Automatic text summarizer
     https://pypi.python.org/pypi/sumy
     """
