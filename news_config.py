@@ -10,7 +10,7 @@ todays_news = False
 
 # Number of news articles (top headlines) you want to pull per category.
 # Default: 5
-headline_count = 5
+headline_count = 10
 
 
 # Set the length of summary text.
@@ -28,6 +28,7 @@ st_categories = [
     ("World", "http://www.straitstimes.com/world", "ST_World.txt"),
     # ("Lifestyle", "http://www.straitstimes.com/lifestyle", "ST_Lifestyle.txt"),
     # ("Food", "http://www.straitstimes.com/lifestyle/food", "ST_Food.txt"),
+    ("Business", "http://www.straitstimes.com/business", "ST_Business.txt"),
     # ("Sport", "http://www.straitstimes.com/sport", "ST_Sport.txt"),
     # ("Tech", "http://www.straitstimes.com/tech", "ST_Tech.txt")
 ]
