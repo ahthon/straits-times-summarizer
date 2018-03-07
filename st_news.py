@@ -2,7 +2,7 @@
 STRAITS TIMES SUMMARIZER
 Author: ahthon
 Date created: 14 Oct 2017
-Date last modified: 22 Jan 2018
+Date last modified: 3 Mar 2018
 """
 
 import re
@@ -89,23 +89,6 @@ def articleTitle(soup):
     return(title)
 
 
-def articleByline(soup):
-    """Returns news byline/author. Returns '--' if none is found.
-    """
-    author = soup.find("div", class_="author-field author-name")
-    designation = soup.find("div", class_="author-designation author-field")
-
-    if author and designation:
-        author = author.string
-        designation = designation.string
-        return(str(author+" | "+designation))
-    elif author:
-        author = author.string
-        return(author)
-    else:
-        return("--")
-
-
 def articleText(url):
     """Returns news text.
     """
@@ -129,6 +112,26 @@ def articleID(js):
     if pub_id:
         return(pub_id.group(1))
 
+
+def articleByline(soup, js):
+    """Returns news byline/author. Returns '--' if none is found.
+    """
+    designation = soup.find("div", class_="author-designation author-field")
+
+    target = '"author".*"(.*)"'
+    author = re.search(target, js)
+    if author:
+        author = author.string.replace('+', ' ')
+    else:
+        author = False
+
+    if author and designation:
+        designation = designation.string
+        return(author+" | "+designation)
+    elif author:
+        return(author)
+    else:
+        return("--")
 
 def articleDateTime(js):
     """Returns publication date and time (yyyy:mm:dd hh:mm) of news.
@@ -282,7 +285,7 @@ def Main(percent_reduce, todays_news, email_news):
 
                         pub_id = "#{}".format(articleID(js))
                         title = pub_id+" "+articleTitle(html)
-                        byline = articleByline(html)
+                        byline = articleByline(html, js)
                         keywords = articleKeywords(js)
                         text = articleText(url)
                         wordcount_news += wordCount(text)
@@ -312,7 +315,7 @@ def Main(percent_reduce, todays_news, email_news):
                         # summarized text
                         summary = summarize(url, sents_in_summary)
                         news_lead = sent_tokenize(text)[0]
-                        if news_lead not in summary[0:1]:  # includes lead
+                        if news_lead not in summary[0:1]:  # include the lead
                             write(news_lead, summ_file)
                             wordcount_summ += wordCount(news_lead)
                         for sent in summary:
