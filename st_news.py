@@ -50,6 +50,7 @@ def articleURLs(soup, url_count):
         "span", class_="story-headline", limit=url_count))
     urls = re.findall('href=\"(.*?)\"', hrefs)
     urls = [st+url for url in urls if urls and "javascript" not in url]
+    urls = [url for url in urls if "multimedia/" not in url]
     return(urls)
 
 
@@ -117,7 +118,7 @@ def articleText(url):
 def articleJavaScript(soup):
     """Returns article's html (script tag).
     """
-    script = str(soup.find_all("script", limit=3)[-1])
+    script = str(soup.find_all("script"))
     return(script)
 
 
@@ -133,7 +134,7 @@ def articleID(js):
 def articleDateTime(js):
     """Returns publication date and time (yyyy:mm:dd hh:mm) of news.
     """
-    target = "(\d{4}:\d{2}:\d{2}\s\d{2}:\d{2})"
+    target = '"pubdate":"(.*)"'
     pubdate = re.search(target, js)
     if pubdate:
         return(pubdate.group(1).split(" "))
