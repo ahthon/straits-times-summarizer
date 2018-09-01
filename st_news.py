@@ -2,7 +2,7 @@
 STRAITS TIMES SUMMARIZER
 Author: ahthon
 Date created: 14 Oct 2017
-Date last modified: 22 Jan 2018
+Date last modified: 01 Sep 2018
 """
 
 import re
@@ -144,7 +144,7 @@ def articleDate(pub_datetime):
     """Returns article's published datetime.
     """
     pubdate = pub_datetime[0]
-    date = pubdate.split(":")
+    date = pubdate.split("-")
 
     year, month, day = date[0], date[1], date[2]
 
@@ -358,3 +358,4 @@ def Main(percent_reduce, todays_news, email_news):
 
 if __name__ == "__main__":
     Main(percent_reduce, todays_news, email_news)
+    
