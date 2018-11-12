@@ -97,11 +97,11 @@ def articleByline(soup):
     designation = soup.find("div", class_="author-designation author-field")
 
     if author and designation:
-        author = author.string
-        designation = designation.string
-        return(str(author+" | "+designation))
+        author = str(author.string)
+        designation = str(designation.string)                     
+        return(author+" | "+designation)
     elif author:
-        author = author.string
+        author = str(author.string)
         return(author)
     else:
         return("--")
